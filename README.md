@@ -1,5 +1,5 @@
 # JSPatch-IOS
- 一款 基于JSPatch的iOS开源库
+ 一款 基于JSPatch的iOS开源库，用于修改当前线上版本的Object-C代码
  
 ##  集成
 * 下载完整工具包，并全部导入
