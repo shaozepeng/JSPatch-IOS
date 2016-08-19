@@ -1,15 +1,19 @@
 # JSPatch-IOS
- 一款 基于JSPatch的iOS开源库，用于修改当前线上版本的Object-C代码
- 
+一款 基于JSPatch的iOS开源库，用于修改当前线上版本的Object-C代码
+
+> [配套Java版轻量级服务端传送门](https://github.com/sunzsh/JSPatchServer4J)
+
 ##  集成
 * 下载完整工具包，并全部导入
 * 引入框架JavaScriptCore.framework
 * 引入JSPatch类库
 
 ##  说明文档
-* 根据需求配置好相应的常量
+* 打开 `CommonParameters.h` 文件，设置服务器路径等相关参数
 
-* 接下来，我们取本地存储的信息，如果取出的值不为空，我们就直接加载内容；
+* 在 `AppDelegate didFinishLaunchingWithOptions:` 中调用：
 
-* 如果为空，首页构造请求地址 域名＋版本号＋参数(该参数为请求头中获取的version，第一次为空传0) ，如果获取到的内容和上次一样，服务器则返回空，不一样，返回新内容，本地存储。每次请求完，都需要存储一下 version。
+``` Objective-C
+[DynamicChangeCode loadURLConnectionCompletion]
+```
   
